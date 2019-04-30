@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor 员工
+actor 管理人员
+actor 个人信息数据库
+rectangle 个人信息录入 {
+  (提交个人信息) -- 员工
+  (提交个人信息) -- 个人信息数据库
+  管理人员 -- (个人信息审核)
+  (个人信息审核) -- 个人信息数据库
+}
+@enduml
