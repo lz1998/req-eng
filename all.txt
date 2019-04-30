@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor 老板
+actor 员工
+actor 管理人员
+actor 工资信息数据库
+actor 个人信息数据库
+rectangle 工资管理系统 {
+  老板 -- (查看整体情况)
+  管理人员 -- (个人信息管理)
+  管理人员 -- (基本工资管理)
+  (查看整体情况) -- 工资信息数据库
+  (个人信息管理) -- 个人信息数据库
+  (基本工资管理) -- 工资信息数据库
+  (查看个人工资) -- 工资信息数据库
+  (查看个人工资) -- 员工
+}
+@enduml
